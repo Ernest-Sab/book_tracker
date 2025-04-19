@@ -168,6 +168,18 @@ class Book():
     def percentual_read(self, pages_read):
         self.percentual = (pages_read / self.pages) * 100
         print(f"You have read {self.percentual}% of the book.")
+
+        if self.percentual >= 0 and self.percentual < 25:
+            print("\nYou are just starting the book.\n Don't be lazy!\n")
+        elif self.percentual >= 25 and self.percentual < 50:
+            print("\nYou are getting into the book.\n Keep going!\n")
+        elif self.percentual >= 50 and self.percentual < 75:
+            print("\nYou are halfway through the book.\n")
+        elif self.percentual >= 75 and self.percentual < 100:
+            print("\nYou are almost done with the book.\nCome on! You can do it!\n")
+        else:
+            print("\nCongratulations! You have finished reading the book.")
+        
         return self.percentual
     
 class RunBookTracker():
